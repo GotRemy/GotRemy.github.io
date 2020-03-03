@@ -375,6 +375,10 @@ body.offcanvas {
   margin: 0;
   padding: 0; }
 
+.colorlib-contact{
+  margin-bottom: 15%;
+}
+
 .colorlib-experience,
 .colorlib-skills,
 .colorlib-education,

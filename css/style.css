@@ -7,7 +7,7 @@
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -16,7 +16,10 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(0, 0, 0, 0.7); }
+  color: rgba(255, 255, 255);
+  background-color: #2b2a2a;
+}
+
   @media screen and (max-width: 992px) {
     body {
       font-size: 16px; } }
@@ -35,7 +38,7 @@ p {
   margin-bottom: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #fffdfd;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
   margin: 0 0 30px 0; }
@@ -78,9 +81,9 @@ figure {
   float: left;
   width: 300px;
   position: fixed;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 1001;
-  background: #f2f3f7;
+  background: #535353;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
@@ -187,7 +190,7 @@ figure {
             -o-transform: scaleX(1);
             transform: scaleX(1); }
   #colorlib-aside .colorlib-footer {
-    font-size: 15px;
+    font-size: 150%;
     text-align: center;
     font-weight: 400;
     color: rgba(0, 0, 0, 0.5);
@@ -439,7 +442,7 @@ body.offcanvas {
 
 .hire {
   padding: 2em;
-  background: #f9bf3f; }
+  background: #535353; }
   .hire h2 {
     line-height: 1.5; }
   .hire .btn-hire {
@@ -499,8 +502,8 @@ body.offcanvas {
 
 .panel-body {
   padding: 1.5em;
-  margin-top: 5px;
-  border: 1px solid #e6e6e6 !important; }
+  background-color: #535353;
+}
 
 .timeline-centered {
   position: relative;
@@ -525,7 +528,7 @@ body.offcanvas {
   position: absolute;
   display: block;
   width: 4px;
-  background: #f2f3f7;
+  background-color: #535353;
   top: 20px;
   bottom: 20px;
   margin-left: 29px; }
@@ -545,7 +548,7 @@ body.offcanvas {
   display: block;
   width: 40px;
   height: 40px;
-  background: #2c98f0;
+  background-color: #535353;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -574,7 +577,7 @@ body.offcanvas {
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
-  background: #f2f3f7;
+  background-color: #535353;
   padding: 1.5em;
   margin-left: 60px;
   -webkit-background-clip: padding-box;

@@ -34,6 +34,10 @@ a {
     outline: none;
     text-decoration: none !important; }
 
+section{
+  margin-bottom: 30%;
+}
+
 p {
   margin-bottom: 1.5em; }
 
@@ -41,7 +45,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #fffdfd;
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
-  margin: 0 0 30px 0; }
+  margin: 0 0 30px 0;
+}
 
 h2{
   border-bottom: 1px solid;
@@ -421,7 +426,10 @@ body.offcanvas {
   padding-bottom: 9em;
   clear: both;
   width: 100%;
-  display: block; }
+  display: block;
+  margin-bottom:10%;
+}
+
   @media screen and (max-width: 768px) {
     .colorlib-experience,
     .colorlib-skills,
@@ -1464,3 +1472,21 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+.De-titre{
+  font-size: 500%;
+  text-decoration: underline;
+}
+
+.De-text{
+  font-size:250%;
+  margin:4%;
+}
+
+.De-image{
+  width: 50%;
+}
+
+.De-image-trois{
+  width: 33%;
+}

@@ -979,7 +979,9 @@ body.offcanvas {
   height: 300px;
   width: 100%;
   display: block;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+}
+
   .project .desc {
     position: absolute;
     top: 0;
@@ -990,7 +992,9 @@ body.offcanvas {
     opacity: 0;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
-    transition: 0.3s; }
+    transition: 0.3s;
+  }
+
     .project .desc .con {
       padding: 20px;
       display: block;

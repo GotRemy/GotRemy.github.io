@@ -1436,7 +1436,6 @@ body.offcanvas #colorlib-main, body.offcanvas .colorlib-nav-toggle {
     font-style: 28px;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-    color: #000;
   }
 
   .project .desc span {

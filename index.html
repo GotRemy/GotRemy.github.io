@@ -10,16 +10,7 @@
     <meta name="keywords" content="portfolio, website, personal website, github, web, informatique, developpeur" />
     <meta name="author" content="" />
 
-    <!-- Facebook and Twitter integration -->
-    <!-- <meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" /> -->
+    
 
     <!--Social Media icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +27,9 @@
     <!-- Icomoon Icon Fonts-->
     <link rel="stylesheet" href="css/icomoon.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Flexslider  -->
     <link rel="stylesheet" href="css/flexslider.css">
     <!-- Flaticons  -->
@@ -53,21 +46,25 @@
         <div class="container-wrap">
             <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 
-            <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+            <aside id="colorlib-aside" role="complementary" class="js-fullheight">
                 <div class="text-center">
                     <div class="author-img" style="background-image: url(images/moi.jpg);"></div>
                     <h1 id="colorlib-logo"><a href="index.html">Rémy Got</a></h1>
-                    <span class="position" style="color:black; font-size:90%;">Développeur FullStack</span>
+                    <span class="position" style="color:black; font-size:90%;">
+                        Développeur Front-end<br />
+                        Site vitrine et e-commerce<br />
+                        Intégration de maquette
+                    </span>
                 </div>
                 <nav id="colorlib-main-menu" role="navigation" class="navbar">
                     <div id="navbar" class="collapse">
                         <ul>
                             <li class="active"><a href="#" data-nav-section="about">Présentation</a></li>
                             <li><a href="#" data-nav-section="skills">Compétences</a></li>
-                            <li><a href="#" data-nav-section="education">Formation</a></li>
-                            <li><a href="#" data-nav-section="experience">Experience</a></li>
                             <li><a href="#" data-nav-section="work">Projets</a></li>
-                            <li><a href="#" data-nav-section="veille">Veille Technologique</a></li>
+                            <li><a href="#" data-nav-section="experience">Experience</a></li>
+                            <li><a href="#" data-nav-section="education">Formation</a></li>
+                            <!-- <li><a href="#" data-nav-section="veille">Veille Technologique</a></li> -->
                             <li><a href="#" data-nav-section="contact">Contact</a></li>
                         </ul>
                     </div>
@@ -85,8 +82,35 @@
                                     <div class="col-md-12">
                                         <div class="about-desc">
                                             <h2 class="colorlib-heading">Présentation</h2>
-                                            <p class="tailleText">Je suis en première année de master informatique à l'école Hexagone à Clermont-Ferrand.</p>
-                                            <p class="tailleText">Je vous présente mon portfolio qui vous orientera sur mon suivi scolaire et mes différentes compétences acquises.</p>
+                                            <span>
+                                                <h3>👉🏻Je vous accompagne pour développer votre présence en ligne</h3>
+                                                <h4>🔸Développeur web Freelance</h4>
+                                                J’accompagne les entreprise dans le développement de leur stratégie digitale en créant, optimisant ou en mettant à jour leurs sites web.
+                                                J’ai ainsi pu les aider en mettant à profit de multiples compétences :<br />
+                                                <ul>
+                                                    <li>Création de maquettes</li>
+                                                    <li>Développement web</li>
+                                                    <li>Intégration</li>
+                                                    <li>Optimisation de chargements</li>
+                                                    <li>Optimisation SEO</li>
+                                                </ul>
+                                                <br />
+                                                <h4>🔸À propos de moi</h4>
+                                                Issus d’une formation en BTS SIO où j’ai pu développer mes connaissances en informatique et en développement web, je me suis dirigé ensuite vers la formation Concepteur et Développeur d'Application. J’ai pu y valider titre RNCP de niveau 2.<br />
+                                                J’ai eu l’occasion de pratiquer tout cela également durant mes différents stage.<br />
+                                                <br />
+                                                <h4>🔸Les missions sur lesquelles j’accompagne mes clients :</h4>
+                                                <ul>
+                                                    <li>Création de sites vitrines afin de développer la visibilité en ligne</li>
+                                                    <li>Création de sites sur-mesures afin de répondre à un besoin métier particulier</li>
+                                                    <li>Création de sites e-commerces afin de développer les ventes en lignes</li>
+                                                    <li>Optimisation de référencement afin d’améliorer la présence sur les moteurs de recherche</li>
+                                                    <li>Accompagnement pour la mise en place de stratégie digitale globale</li>
+                                                    <li>Création de design moderne et attrayant respectant l’image de marque de l’entreprise</li>
+                                                </ul>
+                                            </span>
+                                            <!-- <p class="tailleText">Je suis en première année de master informatique à l'école Hexagone à Clermont-Ferrand.</p>
+                                            <p class="tailleText">Je vous présente mon portfolio qui vous orientera sur mon suivi scolaire et mes différentes compétences acquises.</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -111,44 +135,68 @@
                                 <h2 class="colorlib-heading animate-box">Mes compétences</h2>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                        <div class="row rowCompetence">
+                            <div class="competence animate-box" data-animate-effect="fadeInLeft">
                                 <div class="progress-wrap">
                                     <h3>
                                         <div class="skillName">SQL :</div>
-                                        <div class="skillInfoA"> Avancé</div>
+                                        <div class="skillInfoA">Avancé</div>
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                            <div class="competence animate-box" data-animate-effect="fadeInRight">
                                 <div class="progress-wrap">
                                     <h3>
                                         <div class="skillName">CSS :</div>
-                                        <div class="skillInfoA"> Avancé</div>
+                                        <div class="skillInfoA">Avancé</div>
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="competence animate-box" data-animate-effect="fadeInLeft">
                                 <div class="progress-wrap">
                                     <h3>
-                                        <div class="skillName">React :</div>
-                                        <div class="skillInfoD"> Débutant</div>
+                                        <div class="skillName">React.js :</div>
+                                        <div class="skillInfoD">Débutant</div>
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
+                            <div class="competence animate-box" data-animate-effect="fadeInRight">
                                 <div class="progress-wrap">
                                     <h3>
                                         <div class="skillName">JavaScript :</div>
-                                        <div class="skillInfoA"> Avancé</div>
+                                        <div class="skillInfoA">Avancé</div>
                                     </h3>
                                 </div>
                             </div>
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                            <div class="competence animate-box" data-animate-effect="fadeInLeft">
                                 <div class="progress-wrap">
                                     <h3>
                                         <div class="skillName">PHP :</div>
-                                        <div class="skillInfoI"> Intermédiaire</div>
+                                        <div class="skillInfoI">Intermédiaire</div>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="competence animate-box" data-animate-effect="fadeInRight">
+                                <div class="progress-wrap">
+                                    <h3>
+                                        <div class="skillName">Wordpress :</div>
+                                        <div class="skillInfoD">Débutant</div>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="competence animate-box" data-animate-effect="fadeInLeft">
+                                <div class="progress-wrap">
+                                    <h3>
+                                        <div class="skillName">JQuery :</div>
+                                        <div class="skillInfoA">Avancé</div>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="competence animate-box" data-animate-effect="fadeInRight">
+                                <div class="progress-wrap">
+                                    <h3>
+                                        <div class="skillName">Node.js :</div>
+                                        <div class="skillInfoI">Intermédiaire</div>
                                     </h3>
                                 </div>
                             </div>
@@ -156,101 +204,107 @@
                     </div>
                 </section>
 
-                <section class="colorlib-education" data-section="education">
+                <section class="colorlib-work" data-section="work">
                     <div class="colorlib-narrow-content">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                                <h2 class="colorlib-heading animate-box">Ma formation</h2>
+                                <h2 class="colorlib-heading animate-box">Mes Projets</h2>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-                                <div class="fancy-collapse-panel">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingOne">
-                                                <h4 class="panel-title">
-                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">2021-2022 Master d'informatique
-															</a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="row-md-6">
-                                                            <p>Je suis à ce jour en première année de Master informatique à l'école Hexagone.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/geobio.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Géobiotrouvetout</h3>
+                                            <p>Site vitrine sur la géobiologie</p>
+                                            <!-- <div class="services serviceszoom color-2" data-parent="#allrow" role="button" onClick="getPopup(1)">
+                                                <span class="icon2"><i class="fa fa-search"></i></span>
+                                            </div> -->
+                                            <span>C'est un site réalisé pour mes parents, il permet de mieux connaître la géobiologie et d'émettre un avis après une visite.<br /><br />
+										        <a href="https://geobiotrouvetout.com/" target="_blank" id="linkGeobio">geobiotrouvetout.com</a>
+									        </span>
                                         </div>
-
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingTwo">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2020-2021 RNCP II Concepteur Développeur d'Application
-															</a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="row-md-6">
-                                                            <p>J'ai obtenu le titre RCNP de niveau 2 (bac+3) de Concepteur Développeur d'Application chez Human Booster.</p>
-                                                            <p>J'ai obtenu la certification SCRUM PSM (Scrum Master)</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingThree">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">2018-2020 BTS SIO
-									            </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="row-md-6">
-                                                            <p>J'ai réalisé un BTS SIO (Services Informatiques aux Organisations).</p>
-                                                            <p>Avec l'option SLAM (Solutions Logicielles et Applications Métiers).</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading" role="tab" id="headingFour">
-                                                <h4 class="panel-title">
-                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Baccalauréat STMG
-									            </a>
-                                                </h4>
-                                            </div>
-                                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                                <div class="panel-body">
-                                                    <div class="row">
-                                                        <div class="row-md-6">
-                                                            <p>J'ai réalisé un Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion).</p>
-                                                        </div>
-                                                        <div class="row-md-6">
-                                                            <p>Avec la spécialité SIG (Systèmes d'Information de Gestion).</p>
-                                                        </div>
-                                                        <div class="row-md-6">
-                                                            <p>J'ai aussi la mention européenne anglais appliquée à l'économie et au droit.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/suivi.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Suivi Client</h3>
+                                            <span>C'est un site réalisé pour mon père. Il permet de sauvegarder les informations de ses clients ainsi que d'établir un suivi des soins.
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/le_bot.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Bot Discord</h3>
+                                            <span>C'est un bot Discord qui me permet de recevoir quotidiennement une liste des tâches à faire accompagner d'une image aléatoire de ma galerie photo.
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                                <div class="project" style="background-image: url(images/popcorn.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>PopCorn</h3>
+                                            <span>C'est un site web réalisé dans le cadre d'un projet de groupe, en méthode agile permettant à un utilisateur de se créer une playlist de musiques Spotify et de pouvoir leur ajouter des tags.<br />
+											<a href="https://github.com/CarnezEnzo/POP-Corn" target="_blank" class="fa fa-github"></a>
+										</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
+                                <div class="project" style="background-image: url(images/ridespirit.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Bibble du ski</h3>
+                                            <span>C'est un site WordPress réalisé durant mon stage de première année de BTS.<br /><br />
+												Le travail a effectué consisté à exporter toutes les données (Back Office Glisshop) et à les réinjecter au bon format dans Wordpress.
+									</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                                <div class="project" style="background-image: url(images/home.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Athéna</h3>
+                                            <span>C'est une webapp réalisé durant mon stage de deuxième année de BTS.<br /><br />
+										Il permet aux entreprises de visualiser leur portefeuille et leur détail.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
+                                <div class="project" style="background-image: url(images/choriandre_page.png);">
+                                    <div class="desc">
+                                        <div class="con">
+                                            <h3>Desisyphe</h3>
+                                            <span>C'est une webapp sur laquelle j'ai travaillé durant mon stage à Human Booster.<br /><br />
+										Cette webapp permet de faire de la gestion de portefeuille.<br />
+									J'ai procédé au changement de la bibliothèque de composants utilisé sur la webap</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </section>
@@ -360,128 +414,100 @@
                     </div>
                 </section>
 
-                <section class="colorlib-work" data-section="work">
+                <section class="colorlib-education" data-section="education">
                     <div class="colorlib-narrow-content">
                         <div class="row">
                             <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-                                <h2 class="colorlib-heading animate-box">Mes Projets</h2>
+                                <h2 class="colorlib-heading animate-box">Ma formation</h2>
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+                                <div class="fancy-collapse-panel">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/geobio.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Géobiotrouvetout</h3>
-                                            <span>C'est un site réalisé pour mes parents, il permet de mieux connaître la géobiologie et d'émettre un avis après une visite.<br /><br />
-										<a href="https://geobiotrouvetout.com/" target="_blank" id="linkGeobio">geobiotrouvetout.com</a>
-									</span>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">2021-2022 Master d'informatique
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="row-md-6">
+                                                            <p>J'ai réalisé une année de Master informatique à l'école Hexagone.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">2020-2021 RNCP II Concepteur Développeur d'Application
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="row-md-6">
+                                                            <p>J'ai obtenu le titre RCNP de niveau 2 (bac+3) de Concepteur Développeur d'Application chez Human Booster.</p>
+                                                            <p>J'ai obtenu la certification SCRUM PSM (Scrum Master)</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">2018-2020 BTS SIO
+									                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="row-md-6">
+                                                            <p>J'ai réalisé un BTS SIO (Services Informatiques aux Organisations).</p>
+                                                            <p>Avec l'option SLAM (Solutions Logicielles et Applications Métiers).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingFour">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Baccalauréat STMG
+									                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="row-md-6">
+                                                            <p>J'ai réalisé un Baccalauréat STMG (Sciences et Technologies du Management et de la Gestion).</p>
+                                                        </div>
+                                                        <div class="row-md-6">
+                                                            <p>Avec la spécialité SIG (Systèmes d'Information de Gestion).</p>
+                                                        </div>
+                                                        <div class="row-md-6">
+                                                            <p>J'ai aussi la mention européenne anglais appliquée à l'économie et au droit.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/suivi.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Suivi Client</h3>
-                                            <span>C'est un site réalisé pour mon père. Il permet de sauvegarder les informations de ses clients ainsi que d'établir un suivi des soins.
-									</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/le_bot.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Bot Discord</h3>
-                                            <span>C'est un bot Discord qui me permet de recevoir quotidiennement une liste des tâches à faire accompagner d'une image aléatoire de ma galerie photo.
-									</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/popcorn.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>PopCorn</h3>
-                                            <span>C'est un site web réalisé dans le cadre d'un projet de groupe, en méthode agile permettant à un utilisateur de se créer une playlist de musiques Spotify et de pouvoir leur ajouter des tags.<br />
-											<a href="https://github.com/CarnezEnzo/POP-Corn" target="_blank" class="fa fa-github"></a>
-										</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInBottom">
-                                <div class="project" style="background-image: url(images/ridespirit.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Bibble du ski</h3>
-                                            <span>C'est un site WordPress réalisé durant mon stage de première année de BTS.<br /><br />
-												Le travail a effectué consisté à exporter toutes les données (Back Office Glisshop) et à les réinjecter au bon format dans Wordpress.
-									</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/home.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Athéna</h3>
-                                            <span>C'est une webapp réalisé durant mon stage de deuxième année de BTS.<br /><br />
-										Il permet aux entreprises de visualiser leur portefeuille et leur détail.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-                                <div class="project" style="background-image: url(images/choriandre_page.png);">
-                                    <div class="desc">
-                                        <div class="con">
-                                            <h3>Desisyphe</h3>
-                                            <span>C'est une webapp sur laquelle j'ai travaillé durant mon stage à Human Booster.<br /><br />
-										Cette webapp permet de faire de la gestion de portefeuille.<br />
-									J'ai procédé au changement de la bibliothèque de composants utilisé sur la webap, car la précédente était vieillissante.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-                <section class="colorlib-about" data-section="veille">
-                    <div class="colorlib-narrow-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="col-md-12">
-                                        <div class="about-desc">
-                                            <h2 class="colorlib-heading">Veille Technologique</h2>
-                                            <p>J'ai réalisé une veille technologique sur <strong>DevExtreme</strong> qui est une suite de composants JavaScript et HTML5.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="allrow" class="row">
-                                    <div class="col-md-3 animate-box" data-animate-effect="fadeInLeft" onClick="getPopup(1)">
-                                        <div class="services serviceszoom color-2" data-parent="#allrow" role="button" style="display:flex; justify-content:center;">
-                                            <span class="icon2"><i class="fa fa-search"></i></span>
-                                        </div>
-                                    </div>
-
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -505,7 +531,7 @@
                                                 <a href="https://www.linkedin.com/in/r%C3%A9my-got-6a79501a2/" target="_blank" class="fa fa-linkedin"></a>
                                                 <a href="https://github.com/GotRemy" target="_blank" class="fa fa-github"></a>
                                             </p>
-                                            <p style="text-align: center; font-size:120%;"> rgot.sio@gmail.com</p>
+                                            <p style="text-align: center; font-size:120%;"> remygot.pro@gmail.com</p>
                                         </div>
                                     </div>
                                 </div>
@@ -513,100 +539,6 @@
                         </div>
                     </div>
                 </section>
-
-
-                <div id="infos-1" class="hidden veille-container">
-                    <div class="devExtrem" style="width:100%;">
-
-                        <div>
-                            <img class="De-image" src="images/logo.png" />
-                            <p class="De-text">
-                                DevExtrem est le successeur de DevExpress est une solution qui porte le nom de sa société. DevExtreme, propose un outil et une bibliothèque de composant intégré directement aux systèmes Delphi, C++ et ainsi qu’à l’environnement de développement Microsoft
-                                Visual Studio. Effectivement, DevExtreme propose une bibliothèque de composant assez riche. Tous ces composants sont orientés vers une finalité d’analyse. En effet, DevExtreme se positionne sur la création d’outils d’analyse
-                                de données. Leur composant, permet la mise en place rapide et de manière efficiente, d’outils d’analyse dans une solution informatique. Cette suite de composants est libre d’accès et d’usage à des fins non-commerciales
-                                et propose une solution complète payante pour un usage commercial.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p class="De-titre">DevExtreme en détail</p>
-                            <div>
-                                <img class="De-image" src="images/detail.png" />
-                                <p class="De-text">
-                                    Vous pourrez rapidement élaborer une application web, de sa structure HTML responsive conçue au travers de plusieurs thèmes (il est possible d’exporter, d’importer, d’éditer et/ou de surcharger vos styles et thèmes avec le « Theme Builder »). Pour prendre
-                                    en main ces différents widgets, chaque composant est présenté sur le site de l’éditeur au travers d’exemples tous modifiables et testables dynamiquement avec plus de 250 cas d’utilisation dans différents langages de
-                                    programmation. La solution est facile et rapide à assimiler, car chaque composant se déclare et se personnalise de la même manière. Une fois cette logique acquise, on gagne un temps précieux dans l’implémentation et
-                                    l’utilisation des composants au sein de l’applicatif web développé.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <p class="De-titre">Ses concurrents</p>
-                            <div>
-                                <p class="De-text">
-                                    Ses trois principaux concurrents sont : Telerik Nevron Syncfusion
-                                </p>
-                                <img class="De-image-trois" src="images/concu1.png" />
-                                <img class="De-image-trois" src="images/concu2.png" />
-                                <img class="De-image-trois" src="images/concu3.png" />
-                                <p class="De-text">
-                                    Malgré cela, il arrive tout de même à être élu plusieurs fois de suite par Visual Studio Magazine comme meilleure suite de composants.
-                                </p>
-                                <img src="images/medaille.png" style="width:20%;" />
-                            </div>
-                        </div>
-
-                        <div>
-                            <p class="De-titre">Point Fort</p>
-                            <div>
-                                <img class="De-image" src="images/pointfort1.png" />
-                                <p class="De-text">
-                                    L’utilisation de DevExtreme possède bon nombre d’avantages au niveau du développement en lui-même, mais également du temps imparti ainsi que du résultat final. En effet, cette librairie possède une intégration assez facile. Après avoir pris un abonnement,
-                                    il y a juste à télécharger la librairie, l’installer sur le poste de travail et ensuite l’intégrer à Visual Studio. Après ces manipulations, DevExtreme est prêt à être utilisé dans tout projet en ASP.NET. Ensuite, au
-                                    niveau du développement, cette solution permet une production efficiente d’une fonctionnalité d’une application. En effet, l’intégration des composants DevExtreme est assez simple et intuitive. Les composants présents
-                                    dans la librairie sont prêts à être utilisés et configurés. Ceci permet à un projet d’avoir une productivité importante de par la qualité des composants présents ainsi que leur déploiement rapide et efficace. Un gain
-                                    de temps est aussi présent au niveau de la partie ergonomie.
-                                </p>
-                                <img class="De-image" src="images/pointfort2.png" />
-                                <p class="De-text">
-                                    Effectivement, DevExtreme propose plusieurs thèmes pour leur composant. Ces thèmes sont riches, du thème flat design au thème Office. Cette partie va permettre à l’utilisateur de DevExtreme de pouvoir ce concentré sur la partie intelligence du système
-                                    plutôt que sur le design. D’autant plus que le large choix de thème correspond parfaitement à l’ensemble de demandes logiciel. Par exemple, DevExtreme possède un thème d’office 2010 et 2016 qui ravira les utilisateurs
-                                    inconditionnels de l’environnement Microsoft Office et également permettra à l’utilisateur final d’être dans un environnement connu et donc gagner en temps de formation. La modularité des composants présents dans la
-                                    librairie est également importante. En effet, la mise en place de composant tel des grid, graphiques ; peu s’effectuer dans des environnements qui n’étaient pas conformes à la base. Cette modularité est importante pour
-                                    toute conception. En outre les faits techniques, DevExtreme possède une communauté de qualité. En effet, une équipe support est présente sur leur forum et délivre beaucoup d’information sur les bug ou bien même sur
-                                    les bonnes pratiques qui ne sont pas forcément citées dans les documentations officielles. Leur réactivité est également un point fort pour avancer dans chaque processus de développement. De plus, DevExtreme met à disposition
-                                    des démos de leur composant avec des exemples de mise en place ainsi qu’une documentation assez solide et technique.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <p class="De-titre">Faiblesse</p>
-                            <div>
-                                <p class="De-text">
-                                    Cependant DevExtreme ne possède pas que des avantages, il y a aussi des points qui peuvent paraître gênants dans certains cas, mais également de vrai inconvénient. En effet, dans les avantages cités ci-dessus, il y avait la flexibilité des composants
-                                    au niveau de l’environnement. À l’inverse de cette grande flexibilité, au niveau de l’intelligence des composants la personnalisation devient beaucoup plus complexe. En effet, DevExtreme ne permet pas, ou difficilement,
-                                    de personnaliser ces composants pour qui répondent à un certain besoin. Sur des applications bien spécifiques, cela peut devenir très contraignant et DevExtreme perd son côté productif pour une conception d’application.
-                                    De plus, l’utilisation de cette librairie peut être assez restrictive. En effet, l’utilisation de DevExtreme est optimale pour des solutions d’analyse de données. Cependant, elle n’est pas du tout prévue pour la conception
-                                    de sites classique telle que des sites vitrine ou alors des sites e-commerce. Leur volonté de couvrir un domaine bien spécifique leur ferme des portes sur tous les autres domaines. En dernier lieu, il faut savoir que
-                                    DevExtreme peut paraître inadapté lors d’une utilisation avec de très grosses données, type Big data. En effet, les composants proposés répondent en manière de performance à bon nombre de critères, mais, parfois, ne
-                                    sont pas assez puissants pour des traitements de données très importantes. Malgré son bon nombre d’avantages, DevExtreme présente quand même certaines limites quand son utilisation n’est pas celle qu’il lui est destiné.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <p class="De-titre">Conclusion</p>
-                            <div>
-                                <p class="De-text">
-                                    DevExtreme propose diverses librairies de composants adaptées à des demandes précisent en terme de développement. Ces outils permettent d’accroître la productivité du développement d’une application ainsi que de correspondre aux demandes finales.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
 
             </div>
             <!-- end:colorlib-main -->
@@ -620,7 +552,10 @@
     <!-- jQuery Easing -->
     <script src="js/jquery.easing.1.3.js"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
     <!-- Waypoints -->
     <script src="js/jquery.waypoints.min.js"></script>
     <!-- Flexslider -->

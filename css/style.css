@@ -65,6 +65,10 @@ h6 {
     margin: 0 0 30px 0;
 }
 
+.about-desc h4{
+    margin-bottom: 15px;
+}
+
 h2 {
     border-bottom: 1px solid;
     padding-bottom: 3px;
@@ -178,7 +182,7 @@ figure figcaption {
     display: block;
     margin-bottom: 2em;
     font-size: 12px;
-    text-transform: uppercase;
+    font-weight: bold;
 }
 
 #colorlib-aside #colorlib-logo {
@@ -520,6 +524,14 @@ figure figcaption {
     }
 }
 
+.btn-learn{
+    max-width: 220px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 body.offcanvas {
     overflow-x: hidden;
 }
@@ -595,6 +607,27 @@ body.offcanvas .colorlib-nav-toggle {
     text-shadow: 0.1em 0.2em 0.2em black;
 }
 
+.rowCompetence{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+
+.competence{
+    width: 25%;
+}
+
+@media screen and (max-width: 910px){
+    .competence{
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .competence{
+        width: 50%;
+    }
+}
 .colorlib-experience,
 .colorlib-skills,
 .colorlib-education,
@@ -670,9 +703,10 @@ body.offcanvas .colorlib-nav-toggle {
 
 .about-desc h3 {
     font-size: 18px;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     font-weight: 500;
+    font-style: oblique;
+    font-weight: bold;
 }
 
 .hire {
@@ -1376,7 +1410,7 @@ body.offcanvas .colorlib-nav-toggle {
     background-repeat: no-repeat;
     position: relative;
     height: 360px;
-    width: 104%;
+    width: 100%;
     display: block;
     margin-bottom: 30px;
 }
@@ -1400,6 +1434,7 @@ body.offcanvas .colorlib-nav-toggle {
     display: block;
     position: relative;
     height: 300px;
+    word-break: break-all;
 }
 
 .project .desc .con .icon {
@@ -1473,10 +1508,10 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
-    .project .desc {
+    /* .project .desc {
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
-    }
+    } */
     .project .desc h3 {
         font-style: 28px;
         -webkit-transform: translate3d(0, 0, 0);
@@ -1500,6 +1535,12 @@ body.offcanvas .colorlib-nav-toggle {
 .project:hover .desc span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+}
+
+.services{
+    display:flex;
+    justify-content:center;
+    width: 50%;
 }
 
 #linkGeobio,
@@ -2030,7 +2071,8 @@ body.offcanvas .colorlib-nav-toggle {
     cursor: pointer;
     opacity: 1;
     visibility: hidden;
-    padding: 20px;
+    margin: 20px;
+    padding: 0px 5px 5px 5px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
@@ -2040,6 +2082,7 @@ body.offcanvas .colorlib-nav-toggle {
     .colorlib-nav-toggle {
         opacity: 1;
         visibility: visible;
+        background-color: #3c3c3c;
     }
 }
 

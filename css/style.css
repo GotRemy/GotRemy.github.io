@@ -27,6 +27,15 @@ body {
     body {
         font-size: 16px;
     }
+    .tablePrice{
+        width: 45% !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .tablePrice{
+        width: 90% !important;
+    }
 }
 
 a {
@@ -65,7 +74,7 @@ h6 {
     margin: 0 0 30px 0;
 }
 
-.about-desc h4{
+.about-desc h4 {
     margin-bottom: 15px;
 }
 
@@ -524,7 +533,7 @@ figure figcaption {
     }
 }
 
-.btn-learn{
+.btn-learn {
     max-width: 220px;
     display: flex;
     justify-content: space-around;
@@ -607,27 +616,28 @@ body.offcanvas .colorlib-nav-toggle {
     text-shadow: 0.1em 0.2em 0.2em black;
 }
 
-.rowCompetence{
+.rowCompetence {
     display: flex;
     flex-wrap: wrap;
     padding-left: 15px;
 }
 
-.competence{
+.competence {
     width: 25%;
 }
 
-@media screen and (max-width: 910px){
-    .competence{
+@media screen and (max-width: 910px) {
+    .competence {
         width: 33%;
     }
 }
 
-@media screen and (max-width: 460px){
-    .competence{
+@media screen and (max-width: 460px) {
+    .competence {
         width: 50%;
     }
 }
+
 .colorlib-experience,
 .colorlib-skills,
 .colorlib-education,
@@ -645,6 +655,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
+
     .colorlib-experience,
     .colorlib-skills,
     .colorlib-education,
@@ -1508,6 +1519,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 @media screen and (max-width: 768px) {
+
     /* .project .desc {
         opacity: 1;
         background: rgba(0, 0, 0, 0.4);
@@ -1517,6 +1529,7 @@ body.offcanvas .colorlib-nav-toggle {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
+
     .project .desc span {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
@@ -1537,9 +1550,9 @@ body.offcanvas .colorlib-nav-toggle {
     transform: translate3d(0, 0, 0);
 }
 
-.services{
-    display:flex;
-    justify-content:center;
+.services {
+    display: flex;
+    justify-content: center;
     width: 50%;
 }
 
@@ -2067,7 +2080,7 @@ body.offcanvas .colorlib-nav-toggle {
     position: fixed;
     left: -5px;
     top: 0px;
-    z-index: 9999;
+    z-index: 1001;
     cursor: pointer;
     opacity: 1;
     visibility: hidden;
@@ -2151,4 +2164,183 @@ body.offcanvas .colorlib-nav-toggle {
 
 .De-image-trois {
     width: 33%;
+}
+
+.carousel-caption {
+    background-color: rgba(159, 157, 157, 0.9);
+    border-radius: 50px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgb(53, 53, 53);
+    width: 25%;
+    height: 25%;
+}
+
+.carousel-control-prev-icon {
+    margin-right: 50%;
+}
+
+.carousel-control-next-icon {
+    margin-left: 50%;
+}
+
+.carousel-caption {
+    bottom: 5px;
+}
+
+@media screen and (max-width: 1036px) and (min-width: 768px) {
+
+    .carousel-caption p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .carousel-caption p {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .carousel-caption p {
+        display: none;
+    }
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1002;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.tablePrice th div {
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-size: 150%;
+}
+
+#rowPrice {
+    background-color: #f0f0f1;
+    text-align: center;
+    font-size: 125%;
+}
+
+.fa-check {
+    color: #1cb01c;
+    padding-right: 5px;
+}
+
+.tablePrice tbody tr {
+    border-top: 2px solid #6a6a6a;
+}
+
+.tablePrice{
+    width: 30%;
+}
+
+#allTable {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
 }

@@ -1,272 +1,290 @@
-; (function () {
-
-	'use strict';
-
-
-
-	var isMobile = {
-		Android: function () {
-			return navigator.userAgent.match(/Android/i);
-		},
-		BlackBerry: function () {
-			return navigator.userAgent.match(/BlackBerry/i);
-		},
-		iOS: function () {
-			return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-		},
-		Opera: function () {
-			return navigator.userAgent.match(/Opera Mini/i);
-		},
-		Windows: function () {
-			return navigator.userAgent.match(/IEMobile/i);
-		},
-		any: function () {
-			return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-		}
-	};
+;
+(function() {
+
+    'use strict';
+
+
+
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
 
-	var fullHeight = function () {
+    var fullHeight = function() {
+
+        if (!isMobile.any()) {
+            $('.js-fullheight').css('height', $(window).height());
+            $(window).resize(function() {
+                $('.js-fullheight').css('height', $(window).height());
+            });
+        }
 
-		if (!isMobile.any()) {
-			$('.js-fullheight').css('height', $(window).height());
-			$(window).resize(function () {
-				$('.js-fullheight').css('height', $(window).height());
-			});
-		}
+    };
 
-	};
 
+    var counter = function() {
+        $('.js-counter').countTo({
+            formatter: function(value, options) {
+                return value.toFixed(options.decimals);
+            },
+        });
+    };
 
-	var counter = function () {
-		$('.js-counter').countTo({
-			formatter: function (value, options) {
-				return value.toFixed(options.decimals);
-			},
-		});
-	};
 
+    var counterWayPoint = function() {
+        if ($('#colorlib-counter').length > 0) {
+            $('#colorlib-counter').waypoint(function(direction) {
 
-	var counterWayPoint = function () {
-		if ($('#colorlib-counter').length > 0) {
-			$('#colorlib-counter').waypoint(function (direction) {
+                if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                    setTimeout(counter, 400);
+                    $(this.element).addClass('animated');
+                }
+            }, { offset: '90%' });
+        }
+    };
 
-				if (direction === 'down' && !$(this.element).hasClass('animated')) {
-					setTimeout(counter, 400);
-					$(this.element).addClass('animated');
-				}
-			}, { offset: '90%' });
-		}
-	};
+    // Animations
+    var contentWayPoint = function() {
+        var i = 0;
+        $('.animate-box').waypoint(function(direction) {
 
-	// Animations
-	var contentWayPoint = function () {
-		var i = 0;
-		$('.animate-box').waypoint(function (direction) {
+            if (direction === 'down' && !$(this.element).hasClass('animated')) {
 
-			if (direction === 'down' && !$(this.element).hasClass('animated')) {
+                i++;
 
-				i++;
+                $(this.element).addClass('item-animate');
+                setTimeout(function() {
 
-				$(this.element).addClass('item-animate');
-				setTimeout(function () {
+                    $('body .animate-box.item-animate').each(function(k) {
+                        var el = $(this);
+                        setTimeout(function() {
+                            var effect = el.data('animate-effect');
+                            if (effect === 'fadeIn') {
+                                el.addClass('fadeIn animated');
+                            } else if (effect === 'fadeInLeft') {
+                                el.addClass('fadeInLeft animated');
+                            } else if (effect === 'fadeInRight') {
+                                el.addClass('fadeInRight animated');
+                            } else {
+                                el.addClass('fadeInUp animated');
+                            }
 
-					$('body .animate-box.item-animate').each(function (k) {
-						var el = $(this);
-						setTimeout(function () {
-							var effect = el.data('animate-effect');
-							if (effect === 'fadeIn') {
-								el.addClass('fadeIn animated');
-							} else if (effect === 'fadeInLeft') {
-								el.addClass('fadeInLeft animated');
-							} else if (effect === 'fadeInRight') {
-								el.addClass('fadeInRight animated');
-							} else {
-								el.addClass('fadeInUp animated');
-							}
+                            el.removeClass('item-animate');
+                        }, k * 200, 'easeInOutExpo');
+                    });
 
-							el.removeClass('item-animate');
-						}, k * 200, 'easeInOutExpo');
-					});
+                }, 100);
 
-				}, 100);
+            }
 
-			}
+        }, { offset: '85%' });
+    };
 
-		}, { offset: '85%' });
-	};
 
+    var burgerMenu = function() {
 
-	var burgerMenu = function () {
+        $('.js-colorlib-nav-toggle').on('click', function(event) {
+            event.preventDefault();
+            var $this = $(this);
 
-		$('.js-colorlib-nav-toggle').on('click', function (event) {
-			event.preventDefault();
-			var $this = $(this);
+            if ($('body').hasClass('offcanvas')) {
+                $this.removeClass('active');
+                $('body').removeClass('offcanvas');
+            } else {
+                $this.addClass('active');
+                $('body').addClass('offcanvas');
+            }
+        });
 
-			if ($('body').hasClass('offcanvas')) {
-				$this.removeClass('active');
-				$('body').removeClass('offcanvas');
-			} else {
-				$this.addClass('active');
-				$('body').addClass('offcanvas');
-			}
-		});
 
 
+    };
 
-	};
+    // Click outside of offcanvass
+    var mobileMenuOutsideClick = function() {
 
-	// Click outside of offcanvass
-	var mobileMenuOutsideClick = function () {
+        $(document).click(function(e) {
+            var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
+            if (!container.is(e.target) && container.has(e.target).length === 0) {
 
-		$(document).click(function (e) {
-			var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
-			if (!container.is(e.target) && container.has(e.target).length === 0) {
+                if ($('body').hasClass('offcanvas')) {
 
-				if ($('body').hasClass('offcanvas')) {
+                    $('body').removeClass('offcanvas');
+                    $('.js-colorlib-nav-toggle').removeClass('active');
 
-					$('body').removeClass('offcanvas');
-					$('.js-colorlib-nav-toggle').removeClass('active');
+                }
 
-				}
+            }
+        });
 
-			}
-		});
+        $(window).scroll(function() {
+            if ($('body').hasClass('offcanvas')) {
 
-		$(window).scroll(function () {
-			if ($('body').hasClass('offcanvas')) {
+                $('body').removeClass('offcanvas');
+                $('.js-colorlib-nav-toggle').removeClass('active');
 
-				$('body').removeClass('offcanvas');
-				$('.js-colorlib-nav-toggle').removeClass('active');
+            }
+        });
 
-			}
-		});
+    };
 
-	};
+    var clickMenu = function() {
 
-	var clickMenu = function () {
+        $('#navbar a:not([class="external"])').click(function(event) {
+            var section = $(this).data('nav-section'),
+                navbar = $('#navbar');
 
-		$('#navbar a:not([class="external"])').click(function (event) {
-			var section = $(this).data('nav-section'),
-				navbar = $('#navbar');
+            if ($('[data-section="' + section + '"]').length) {
+                $('html, body').animate({
+                    scrollTop: $('[data-section="' + section + '"]').offset().top - 55
+                }, 500);
+            }
 
-			if ($('[data-section="' + section + '"]').length) {
-				$('html, body').animate({
-					scrollTop: $('[data-section="' + section + '"]').offset().top - 55
-				}, 500);
-			}
+            if (navbar.is(':visible')) {
+                navbar.removeClass('in');
+                navbar.attr('aria-expanded', 'false');
+                $('.js-colorlib-nav-toggle').removeClass('active');
+            }
 
-			if (navbar.is(':visible')) {
-				navbar.removeClass('in');
-				navbar.attr('aria-expanded', 'false');
-				$('.js-colorlib-nav-toggle').removeClass('active');
-			}
+            event.preventDefault();
+            return false;
+        });
 
-			event.preventDefault();
-			return false;
-		});
 
+    };
 
-	};
+    // Reflect scrolling in navigation
+    var navActive = function(section) {
 
-	// Reflect scrolling in navigation
-	var navActive = function (section) {
+        var $el = $('#navbar > ul');
+        $el.find('li').removeClass('active');
+        $el.each(function() {
+            $(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
+        });
 
-		var $el = $('#navbar > ul');
-		$el.find('li').removeClass('active');
-		$el.each(function () {
-			$(this).find('a[data-nav-section="' + section + '"]').closest('li').addClass('active');
-		});
+    };
 
-	};
+    var navigationSection = function() {
 
-	var navigationSection = function () {
+        var $section = $('section[data-section]');
 
-		var $section = $('section[data-section]');
+        $section.waypoint(function(direction) {
 
-		$section.waypoint(function (direction) {
+            if (direction === 'down') {
+                navActive($(this.element).data('section'));
+            }
+        }, {
+            offset: '150px'
+        });
 
-			if (direction === 'down') {
-				navActive($(this.element).data('section'));
-			}
-		}, {
-			offset: '150px'
-		});
+        $section.waypoint(function(direction) {
+            if (direction === 'up') {
+                navActive($(this.element).data('section'));
+            }
+        }, {
+            offset: function() { return -$(this.element).height() + 155; }
+        });
 
-		$section.waypoint(function (direction) {
-			if (direction === 'up') {
-				navActive($(this.element).data('section'));
-			}
-		}, {
-			offset: function () { return -$(this.element).height() + 155; }
-		});
+    };
 
-	};
 
 
 
 
 
+    var sliderMain = function() {
 
-	var sliderMain = function () {
+        $('#colorlib-hero .flexslider').flexslider({
+            animation: "fade",
+            slideshowSpeed: 5000,
+            directionNav: true,
+            start: function() {
+                setTimeout(function() {
+                    $('.slider-text').removeClass('animated fadeInUp');
+                    $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+                }, 500);
+            },
+            before: function() {
+                setTimeout(function() {
+                    $('.slider-text').removeClass('animated fadeInUp');
+                    $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+                }, 500);
+            }
 
-		$('#colorlib-hero .flexslider').flexslider({
-			animation: "fade",
-			slideshowSpeed: 5000,
-			directionNav: true,
-			start: function () {
-				setTimeout(function () {
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			},
-			before: function () {
-				setTimeout(function () {
-					$('.slider-text').removeClass('animated fadeInUp');
-					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-				}, 500);
-			}
+        });
 
-		});
+    };
 
-	};
+    // Document on load.
+    $(function() {
+        fullHeight();
+        counter();
+        counterWayPoint();
+        contentWayPoint();
+        burgerMenu();
 
-	// Document on load.
-	$(function () {
-		fullHeight();
-		counter();
-		counterWayPoint();
-		contentWayPoint();
-		burgerMenu();
+        clickMenu();
+        // navActive();
+        navigationSection();
+        // windowScroll();
 
-		clickMenu();
-		// navActive();
-		navigationSection();
-		// windowScroll();
 
-
-		mobileMenuOutsideClick();
-		sliderMain();
-	});
+        mobileMenuOutsideClick();
+        sliderMain();
+    });
 
 
 }());
 
 function imgZoom(idImg) {
-	// Get the modal
-	var modal = document.getElementById("myModal");
-	var img = document.getElementById(idImg.id);
-	var modalImg = document.getElementById("img01");
-	var captionText = document.getElementById("caption");
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById(idImg.id);
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
 
-	modal.style.display = "block";
-	modalImg.src = idImg.src;
-	captionText.innerHTML = document.getElementById(idImg.id).parentElement.querySelector('p').innerText;
+    modal.style.display = "block";
+    modalImg.src = idImg.src;
+    captionText.innerHTML = document.getElementById(idImg.id).parentElement.querySelector('p').innerText;
 
-	// Get the <span> element that closes the modal
-	var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-	// When the user clicks on <span> (x), close the modal
-	span.onclick = function () {
-		modal.style.display = "none";
-	}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    document.addEventListener(
+        "click",
+        function(event) {
+            // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+            if (event.target.matches("#mainModal")) {
+                modal.style.display = "none";
+            }
+        },
+        false
+    )
+}
+
+
+
+function closeModal() {
+    document.querySelector("#myModal").style.display = "none"
 }

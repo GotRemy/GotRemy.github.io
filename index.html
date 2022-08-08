@@ -79,25 +79,26 @@
     </main>
 
     <script type=text/javascript>
+window.location.replace("https://devams.fr");
 
-function docReady(fn) {
-    // see if DOM is already available
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        // call on next available tick
-        setTimeout(fn, 1);
-    } else {
-        document.addEventListener("DOMContentLoaded", fn);
-    }
-}    
+// function docReady(fn) {
+//     // see if DOM is already available
+//     if (document.readyState === "complete" || document.readyState === "interactive") {
+//         // call on next available tick
+//         setTimeout(fn, 1);
+//     } else {
+//         document.addEventListener("DOMContentLoaded", fn);
+//     }
+// }    
 
-function loadDevam() {
-    window.location.replace("https://devams.fr");
-}
+// function loadDevam() {
+//     window.location.replace("https://devams.fr");
+// }
 
-docReady(function() {
-    // DOM is loaded and ready for manipulation here
-    setTimeout(loadDevam, 8000);
-});
+// docReady(function() {
+//     // DOM is loaded and ready for manipulation here
+//     setTimeout(loadDevam, 8);
+// });
         </script>
 
 </body>
